@@ -1,0 +1,182 @@
+/* GetMoney+ Team Page Styles */
+
+.main-content {
+    padding-bottom: var(--spacing-xl);
+}
+
+/* Team Stats */
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-card {
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: var(--spacing-md);
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: var(--spacing-xs) 0;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* Team Members */
+.team-members {
+    margin-top: var(--spacing-lg);
+}
+
+.member-card {
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.member-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.member-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--spacing-md);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-name {
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.member-level {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin: var(--spacing-xs) 0;
+}
+
+.member-stats {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xs);
+    font-size: 0.85rem;
+}
+
+.member-stat {
+    display: flex;
+    align-items: center;
+}
+
+.member-stat-value {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.member-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-member-action {
+    background-color: transparent;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: 50%;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-member-action:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.btn-member-action svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Invite Section */
+.invite-section {
+    margin-top: var(--spacing-xl);
+    background-color: var(--surface);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.invite-form {
+    max-width: 500px;
+    margin: var(--spacing-md) auto 0;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+    .stat-card, .member-card {
+        background-color: var(--surface);
+    }
+    
+    .invite-section {
+        background-color: rgba(255,255,255,0.05);
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GetMoney+ - Plataforma de investimentos inteligentes">
+    <meta name="theme-color" content="#FFC107">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="GetMoney+">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+    <title>GetMoney+ | Início</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/svg/icon-192x192.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="app-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h1 class="auth-logo" style="margin: var(--spacing-md) 0 var(--spacing-sm); font-size: 1.8rem;">Get<span>Money+</span></h1>
+                <div class="user-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--text-dark); font-weight: 600; cursor: pointer; transition: var(--transition);">
+                    <span id="user-initial">?</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <section class="container mt-lg mb-xl">
+                <h1 class="text-center mb-md">Bem-vindo ao Get<span>Money+</span></h1>
+                <p class="text-center mb-lg" style="color: var(--text-light);">Gerencie seus investimentos e aumente sua renda.</p>
+                
+                <div class="card fade-in mb-md">
+                    <h3 style="margin-top: 0;">Saldo Atual</h3>
+                    <p style="font-size: var(--font-size-lg); font-weight: 700; color: var(--success); margin: 0;" id="user-balance">0 GC</p>
+                </div>
+                
+                <h2 class="mb-md">Ações Rápidas</h2>
+                <div class="row mb-lg">
+                    <div class="col-6 col-md-3 mb-md">
+                        <div class="quick-action-card fade-in" onclick="window.location.href='wallet.html'">
+                            <div class="quick-action-icon" style="background: var(--success-light); color: var(--success);">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><path d="m16 8 2 0 0 8-2 0"></path><path d="M7 8v4"></path><path d="M7 16h.01"></path></svg>
+                            </div>
+                            <h3>Carteira</h3>
+                            <p>Deposite, converta e saque seus GetCoins.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-md">
+                        <div class="quick-action-card fade-in" onclick="window.location.href='invest.html'">
+                            <div class="quick-action-icon" style="background: var(--primary-light); color: var(--primary);">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                            </div>
+                            <h3>Mercado de Mineiros</h3>
+                            <p>Compre mineiros para gerar GetCoins.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-md">
+                        <div class="quick-action-card fade-in" onclick="window.location.href='recommend.html'">
+                            <div class="quick-action-icon" style="background: var(--success-light); color: var(--success);">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                            </div>
+                            <h3>Indicar Amigos</h3>
+                            <p>Ganhe bônus ao convidar amigos.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-md">
+                        <div class="quick-action-card fade-in" onclick="window.location.href='team.html'">
+                            <div class="quick-action-icon" style="background: var(--warning-light); color: var(--warning);">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <h3>Minha Equipe</h3>
+                            <p>Gerencie sua equipe de investidores.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-md">
+                        <div class="quick-action-card fade-in" onclick="window.location.href='user.html'">
+                            <div class="quick-action-icon" style="background: var(--error-light); color: var(--error);">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </div>
+                            <h3>Meu Perfil</h3>
+                            <p>Veja e edite suas informações pessoais.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="mb-md">Investimentos Ativos</h2>
+                
+                <div class="investment-list" id="investment-list">
+                    <p class="text-center no-investments" style="color: var(--text-light); display: none;">Você não possui investimentos ativos no momento.</p>
+                </div>
+                
+                <h2 class="mb-md">Notícias e Atualizações</h2>
+                <div class="card fade-in mb-lg">
+                    <h3 style="margin-top: 0;">Novidades no GetMoney+</h3>
+                    <p style="color: var(--text-light);">Estamos lançando novos planos de investimento com retornos ainda maiores. Fique atento!</p>
+                    <button class="btn-outline">Saiba Mais</button>
+                </div>
+            </section>
+        </main>
+        
+        <nav class="bottom-nav fade-in">
+            <a href="home.html" class="nav-item active">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Início</span>
+            </a>
+            <a href="invest.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <span>Investir</span>
+            </a>
+            <a href="recommend.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                <span>Indicar</span>
+            </a>
+            <a href="team.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>Equipe</span>
+            </a>
+            <a href="user.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

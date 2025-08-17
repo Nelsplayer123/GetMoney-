@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GetMoney+ - Plataforma de investimentos inteligentes">
+    <meta name="theme-color" content="#FFC107">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="GetMoney+">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+    <title>GetMoney+ | Login</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/svg/icon-192x192.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card fade-in">
+            <div class="auth-header">
+                <h1 class="auth-logo">Get<span>Money+</span></h1>
+                <p class="auth-subtitle">Acesse sua conta e comece a investir</p>
+            </div>
+            
+            <form action="login" method="POST" class="auth-form fade-in" style="max-width: 400px; margin-left: auto; margin-right: auto;">
+                <div class="form-group mb-md">
+                    <label for="login-phone">Telefone</label>
+                    <input type="tel" id="login-phone" name="login-phone" placeholder="Seu número de telefone" required>
+                </div>
+                <div class="form-group mb-lg">
+                    <label for="login-password">Senha</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="login-password" name="password" placeholder="Sua senha" required class="password-input">
+                        <div class="password-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary btn-block">Entrar</button>
+                <p class="text-center mt-md mb-0">Não tem conta? <a href="signup.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">Crie uma agora</a></p>
+            </form>
+            
+            <div class="security-note">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a14.66 14.66 0 0 0 0 20v-2.08c-2.148-.911-3.9-3.36-3.9-5.92 0-2.866 2.686-5.2 6-5.2 3.314 0 6 2.334 6 5.2 0 2.553-1.748 5.007-3.9 5.92V22c5.556-1.643 10-7.589 10-14C26 5.171 21.206 1 15 1S4 5.171 4 12c0 6.411 4.443 12.357 10 14v-2.08c-2.148-.911-3.9-3.36-3.9-5.92 0-.641.119-1.246.33-1.793"></path><path d="M8 12h0"></path><path d="M16 12h0"></path><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"></path></svg>
+                Conexão segura | Seus dados estão protegidos
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

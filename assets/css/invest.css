@@ -1,0 +1,370 @@
+/* GetMoney+ Investment Page Styles - Mobile First Design */
+
+.main-content {
+    padding-bottom: 80px; /* Space for bottom nav */
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+}
+
+/* Header Section */
+.marketplace-header {
+    background: linear-gradient(135deg, var(--primary) 0%, #f59e0b 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.marketplace-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+.marketplace-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.marketplace-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.marketplace-header p {
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Miners Grid */
+.miners-section {
+    padding: 40px 0;
+    background: white;
+}
+
+.miners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.miner-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    padding: 28px;
+    transition: all 0.4s ease;
+    border: 1px solid #f1f5f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.miner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), #f59e0b);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.miner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    border-color: var(--primary);
+}
+
+.miner-card:hover::before {
+    transform: scaleX(1);
+}
+
+.miner-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.miner-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.miner-icon::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--primary), #f59e0b);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.miner-card:hover .miner-icon::after {
+    opacity: 1;
+}
+
+.miner-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: var(--text);
+}
+
+.miner-level {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), #f59e0b);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.miner-stats {
+    margin-bottom: 28px;
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.miner-price {
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    border-radius: 16px;
+    border: 2px solid #e2e8f0;
+}
+
+.price-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.price-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.price-conversion {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 500;
+    display: block;
+}
+
+/* Investment Cards */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-12 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.col-md-4 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        width: 33.333333%;
+    }
+}
+
+.investment-card {
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: var(--spacing-lg);
+    height: 100%;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.investment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.investment-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.investment-card .features {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0;
+    flex: 1;
+}
+
+.investment-card .features li {
+    padding: var(--spacing-xs) 0;
+    display: flex;
+    align-items: center;
+}
+
+.investment-card .features li:before {
+    content: '✓';
+    color: var(--success);
+    margin-right: var(--spacing-sm);
+    font-weight: bold;
+}
+
+.investment-card .btn-invest {
+    background-color: var(--primary);
+    color: var(--text-dark);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: auto;
+}
+
+.investment-card .btn-invest:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.02);
+}
+
+.investment-card.featured {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+}
+
+.investment-card.featured:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.investment-card .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary);
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+/* Return Calculator */
+.calculator-section {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--surface);
+    border-radius: var(--border-radius);
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.calculator-result {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.calculator-result .amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+    .investment-card {
+        background-color: var(--surface);
+    }
+    
+    .calculator-section {
+        background-color: rgba(255,255,255,0.05);
+    }
+}

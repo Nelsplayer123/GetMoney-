@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GetMoney+ - Plataforma de investimentos inteligentes">
+    <meta name="theme-color" content="#FFC107">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="GetMoney+">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+    <title>GetMoney+ | Meu Perfil</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/svg/icon-192x192.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
+</head>
+<body>
+   
+            </div>
+        </header>
+        
+        <div class="hero-section">
+            <svg class="hero-graphics" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,133.3C672,117,768,139,864,165.3C960,192,1056,224,1152,218.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+        
+        <main class="main-content">
+            <section class="container mt-lg mb-xl">
+               
+                <!-- Card de Informações Pessoais -->
+                <div class="user-profile-card">
+                    <div class="user-info-container">
+                        <div class="user-avatar">
+                            <span id="user-avatar-initial">?</span>
+                        </div>
+                        <div class="user-details">
+                            <h3 id="user-name" class="user-name">Nome do Usuário</h3>
+                            <p id="user-phone" class="user-phone">+55 (XX) XXXXX-XXXX</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-error" style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14 2 6.8a.6.6 0 0 1-.5-.5 5 5 0 0 1 0-2.6A.6.6 0 0 1 2 3h5.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 .5-.5H22a.6.6 0 0 1 .5.3 5 5 0 0 1 0 2.6.6.6 0 0 1-.5.5L14 14v5h-1a1 1 0 0 1-1-1v-5Z"></path></svg>
+                        Sair da Conta
+                    </button>
+                </div>
+                
+                <!-- Card de Progresso e Estatísticas -->
+                <div class="card fade-in">
+                    <h3 class="text-center mb-lg">Progresso e Estatísticas</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value" style="color: var(--primary);">R$ 1.500,00</div>
+                            <div class="stat-label">Total Investido</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" style="color: var(--success);">+ R$ 180,00</div>
+                            <div class="stat-label">Lucro Obtido</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" style="color: var(--primary);">5</div>
+                            <div class="stat-label">Investimentos Ativos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Unificado de Configurações e Histórico -->
+                <div class="card fade-in">
+                    <div class="tabs">
+                        <button class="tab active">Configurações</button>
+                        <button class="tab">Histórico</button>
+                    </div>
+                    
+                    <!-- Seção de Configurações -->
+                    <div class="tab-content active">
+                        <ul class="settings-list">
+                            <li class="settings-item">
+                                <div class="settings-item-content">
+                                    <svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>
+                                    <span>Informações Bancárias</span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </li>
+                            <li class="settings-item">
+                                <div class="settings-item-content">
+                                    <svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                    <span>Segurança e Privacidade</span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </li>
+                            <li class="settings-item">
+                                <div class="settings-item-content">
+                                    <svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                                    <span>Notificações</span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </li>
+                            <li class="settings-item">
+                                <div class="settings-item-content">
+                                    <svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v.5"></path><path d="M12 8v4"></path></svg>
+                                    <span>Ajuda e Suporte</span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Seção de Histórico -->
+                    <div class="tab-content">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div style="background-color: var(--success-light); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <svg style="color: var(--success);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                </div>
+                                <div class="activity-details">
+                                    <div style="font-weight: 600;">Depósito</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-light);">10/06/2023 às 14:30</div>
+                                </div>
+                                <div class="activity-amount positive">+ R$ 500,00</div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div style="background-color: var(--primary-light); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <svg style="color: var(--primary);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                </div>
+                                <div class="activity-details">
+                                    <div style="font-weight: 600;">Investimento #12345</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-light);">08/06/2023 às 10:15</div>
+                                </div>
+                                <div class="activity-amount negative">- R$ 300,00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <nav class="bottom-nav fade-in">
+            <a href="home.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Início</span>
+            </a>
+            <a href="invest.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <span>Investir</span>
+            </a>
+            <a href="recommend.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                <span>Indicar</span>
+            </a>
+            <a href="team.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>Equipe</span>
+            </a>
+            <a href="user.html" class="nav-item active">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GetMoney+ - Plataforma de investimentos inteligentes">
+    <meta name="theme-color" content="#FFC107">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="GetMoney+">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+    <title>GetMoney+ | Indicar Amigos</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/recommend.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/svg/icon-192x192.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="app-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h1 class="auth-logo" style="margin: var(--spacing-md) 0 var(--spacing-sm); font-size: 1.8rem;">Get<span>Money+</span></h1>
+                <div class="user-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--text-dark); font-weight: 600; cursor: pointer; transition: var(--transition);">
+                    <span id="user-initial">?</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <section class="container mt-lg mb-xl">
+                <h1 class="text-center mb-md">Indique Amigos e Ganhe Bônus</h1>
+                <p class="text-center mb-lg" style="color: var(--text-light); max-width: 800px; margin-left: auto; margin-right: auto;">Convide seus amigos para o GetMoney+ e ganhe R$ 10,00 por cada amigo que se cadastrar usando seu código. Quanto mais amigos, mais bônus!</p>
+                
+                <div class="card fade-in" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <h3 class="text-center">Seu Código de Indicação</h3>
+                    <div class="referral-code-wrapper" style="display: flex; justify-content: center; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                        <span class="referral-code" style="font-family: monospace; font-size: 1.5rem; font-weight: bold; background-color: var(--surface); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--border-radius); transition: var(--transition); border: 1px dashed var(--primary); color: var(--primary-dark); letter-spacing: 2px;">GM123XYZ</span>
+                        <button onclick="copyReferralCode()" class="btn btn-primary" style="padding: var(--spacing-sm) var(--spacing-md); min-width: 100px;">Copiar</button>
+                    </div>
+                    <p class="text-center" style="color: var(--text-light); font-size: 0.9rem;">Compartilhe este código com seus amigos. Quando eles se cadastrarem, ambos receberão um bônus!</p>
+                </div>
+                
+                <div class="card fade-in" style="max-width: 600px; margin-left: auto; margin-right: auto; margin-top: var(--spacing-lg);">
+                    <h3 class="text-center">Como Funciona</h3>
+                    <ol style="margin-bottom: var(--spacing-md); padding-left: var(--spacing-md); font-size: 0.95rem;">
+                        <li style="margin-bottom: var(--spacing-sm);">Compartilhe seu código de indicação com amigos.</li>
+                        <li style="margin-bottom: var(--spacing-sm);">Seu amigo se cadastra no GetMoney+ usando seu código.</li>
+                        <li style="margin-bottom: var(--spacing-sm);">Assim que seu amigo fizer o primeiro depósito de no mínimo R$ 50,00, ambos receberão R$ 10,00 de bônus.</li>
+                        <li>Continue indicando para ganhar mais bônus. Não há limite!</li>
+                    </ol>
+                    <p class="text-center" style="color: var(--text-light); font-size: 0.85rem;">* Bônus sujeito a verificação. Termos e condições se aplicam.</p>
+                </div>
+                
+                <div class="card fade-in" style="max-width: 600px; margin-left: auto; margin-right: auto; margin-top: var(--spacing-lg);">
+                    <h3 class="text-center">Amigos Indicados (5)</h3>
+                    <p class="text-center" style="color: var(--text-light); margin-bottom: var(--spacing-md);">Você já ganhou <strong>R$ 50,00</strong> em bônus!</p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-md); font-size: 0.95rem;">
+                        <li style="padding: var(--spacing-sm) var(--spacing-md); border-bottom: 1px solid var(--surface); display: flex; justify-content: space-between; align-items: center;">
+                            <span>João Silva</span>
+                            <span style="color: var(--success);">+ R$ 10,00</span>
+                        </li>
+                        <li style="padding: var(--spacing-sm) var(--spacing-md); border-bottom: 1px solid var(--surface); display: flex; justify-content: space-between; align-items: center;">
+                            <span>Maria Oliveira</span>
+                            <span style="color: var(--success);">+ R$ 10,00</span>
+                        </li>
+                        <li style="padding: var(--spacing-sm) var(--spacing-md); border-bottom: 1px solid var(--surface); display: flex; justify-content: space-between; align-items: center;">
+                            <span>Pedro Santos</span>
+                            <span style="color: var(--success);">+ R$ 10,00</span>
+                        </li>
+                        <li style="padding: var(--spacing-sm) var(--spacing-md); border-bottom: 1px solid var(--surface); display: flex; justify-content: space-between; align-items: center;">
+                            <span>Ana Costa</span>
+                            <span style="color: var(--success);">+ R$ 10,00</span>
+                        </li>
+                        <li style="padding: var(--spacing-sm) var(--spacing-md); display: flex; justify-content: space-between; align-items: center;">
+                            <span>Lucas Almeida</span>
+                            <span style="color: var(--success);">+ R$ 10,00</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <button class="btn btn-outline" disabled>Carregar Mais</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <nav class="bottom-nav fade-in">
+            <a href="home.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Início</span>
+            </a>
+            <a href="invest.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <span>Investir</span>
+            </a>
+            <a href="recommend.html" class="nav-item active">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                <span>Indicar</span>
+            </a>
+            <a href="team.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>Equipe</span>
+            </a>
+            <a href="user.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/database.js"></script>
+</body>
+</html>
